@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>MDP Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <!-- <body onload="init()"> -->
+  <body>
+    <div id="container">
+      <section id="header">
+        <h1>Bookshelf Apps</h1>
+      </section>
+      <section id="main">
+        <form class="add" id="form">
+          <div>
+            <h3>Judul</h3>
+            <input id="title" type="text" placeholder="Judul Buku" />
+          </div>
+          <div>
+            <h3>Penulis</h3>
+            <input id="author" type="text" placeholder="Penulis Buku" />
+          </div>
+          <div>
+            <h3>Tahun</h3>
+            <input id="year" type="number" placeholder="Tahun Terbit Buku" />
+          </div>
+          <div id="cekbox">
+            <p>Selesai Dibaca ?</p>
+            <input id="isComplete" type="checkbox" name="isComplete" />
+          </div>
+          <div>
+            <button type="submit">
+              Masukkan buku ke rak <b>Belum Selesai Dibaca</b>
+            </button>
+          </div>
+        </form>
+        <div class="search">
+          <div class="container">
+            <h3>Cari Buku</h3>
+            <form id="formSearch">
+              <select id="select" name="select">
+                <option value="title">Judul</option>
+                <option value="author">Penulis</option>
+                <option value="year">Tahun</option>
+              </select>
+              <input
+                id="search"
+                name="search"
+                type="text"
+                placeholder="Search Judul Buku"
+              />
+              <button type="submit" id="btnSearch" hidden>Reset</button>
+            </form>
+          </div>
+        </div>
+        <div class="listRead">
+          <div class="container">
+            <h3>List Selesai Dibaca</h3>
+            <div class="cover" id="listRead">
+              <div class="noList">Tidak Ada Buku</div>
+            </div>
+          </div>
+        </div>
+        <div class="listNotRead">
+          <div class="container">
+            <h3>List Belum Selesai Dibaca</h3>
+            <div class="cover" id="listNotRead">
+              <div class="noList">Tidak Ada Buku</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sectionEdit" hidden>
+        <div class="editInput">
+          <p>Ubah</p>
+          <form class="edit" id="formEdit">
+            <input
+              id="editJudul"
+              name="title"
+              type="text"
+              placeholder="Judul"
+              style="width: 30%"
+            />
+            <input
+              id="editPenulis"
+              type="text"
+              name="author"
+              placeholder="Penulis"
+              style="width: 30%"
+            />
+            <input
+              id="editTahun"
+              type="number"
+              name="year"
+              placeholder="Tahun"
+              style="width: 20%"
+            />
+            <button type="submit" id="btnEditSubmit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <img id="bg-atas" src="./svg/bg-atas.svg" alt="bg-atas" width="400" />
+    <img id="bg-right" src="./svg/bg-right.svg" alt="bg-right" width="200" />
+    <img id="bg-left" src="./svg/bg-left.svg" alt="bg-left" width="100" />
+    <img id="bg-bawah" src="./svg/bg-bawah.svg" alt="bg-bawah" width="400" />
+
+    <script src="./js/data.js" type="text/javascript"></script>
+    <script src="./js/dom.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript"></script>
+  </body>
+</html>
